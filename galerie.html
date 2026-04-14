@@ -6,23 +6,24 @@
     <title>La Galerie Parallele - Cristine Monge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bitter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navbar">
         <nav>
-            <div class="logo">CRISTINE MONGE</div>
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">CRISTINE MONGE</a>
             <ul class="nav-links">
-                <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#works">Works</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="project-page fade-in">
-        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+        <a href="index.html#works" class="back-link">&larr; Back to Works</a>
         
         <h1 class="project-title-large">La Galerie Parallele</h1>
         
@@ -41,12 +42,23 @@
             <p>Some unique spaces are made in the exterior like the entrance and the outdoor terrace to balance out the interior space. These exterior spaces create voids that enhance the design of the facade.</p>
         </div>
 
-        <div class="project-gallery" style="display: flex; flex-direction: column; gap: 4rem; margin-top: 6rem;">
-            <img src="images/galerie2.png" alt="Gallery Image 2" style="width: 100%; height: auto; border: 1px solid var(--border-color);">
-            <img src="images/galerie3.png" alt="Gallery Image 3" style="width: 100%; height: auto; border: 1px solid var(--border-color);">
-            <img src="images/galerie4.png" alt="Gallery Image 4" style="width: 100%; height: auto; border: 1px solid var(--border-color);">
-            <img src="images/galerie5.png" alt="Gallery Image 5" style="width: 100%; height: auto; border: 1px solid var(--border-color);">
-            <img src="images/galerie6.png" alt="Gallery Image 6" style="width: 100%; height: auto; border: 1px solid var(--border-color);">
+        <div class="view-toggle">
+            <button class="toggle-btn active" id="btn-carousel">Carousel View</button>
+            <button class="toggle-btn" id="btn-scroll">Scroll View</button>
+        </div>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-button carousel-prev">&#10094;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide"><img src="images/galerie2.png" alt="Gallery Image 2" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/galerie3.png" alt="Gallery Image 3" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/galerie4.png" alt="Gallery Image 4" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/galerie5.png" alt="Gallery Image 5" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/galerie6.png" alt="Gallery Image 6" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                </ul>
+            </div>
+            <button class="carousel-button carousel-next">&#10095;</button>
         </div>
     </main>
     
@@ -55,5 +67,6 @@
             <p>&copy; 2026 Cristine Monge. All rights reserved.</p>
         </div>
     </footer>
+    <script src="carousel.js"></script>
 </body>
 </html>

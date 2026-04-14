@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Canopy - Cristine Monge</title>
+    <title>Sector Plaza - Cristine Monge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bitter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navbar">
         <nav>
-            <div class="logo">CRISTINE MONGE</div>
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">CRISTINE MONGE</a>
             <ul class="nav-links">
-                <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#works">Works</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="project-page fade-in">
-        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+        <a href="index.html#works" class="back-link">&larr; Back to Works</a>
         
-        <h1 class="project-title-large">Urban Canopy</h1>
+        <h1 class="project-title-large">Sector Plaza</h1>
         
         <div class="project-info-grid">
-            <div><strong>Type</strong> Public Space</div>
-            <div><strong>Location</strong> London, UK</div>
-            <div><strong>Year</strong> 2026</div>
+            <div><strong>Type</strong> Academic (ARCH 400)</div>
+            <div><strong>Professor</strong> Filler</div>
         </div>
 
         <div class="project-hero-image">
-            <img src="images/pavilion.png" alt="Urban Pavilion">
+            <img src="images/harbor-new-1-clean.png" alt="Sector Plaza Perspective" style="width: 100%; height: auto;">
         </div>
 
         <div class="project-description">
-            <p>The Urban Canopy acts as a wooden oasis in the center of a bustling glass and steel metropolis. The swooping, parametric geometries of the wooden truss roof create a welcoming public environment.</p>
-            <p>Equipped with a public cafe and seating step-downs, the pavilion integrates immediately with the street level. It serves as both a sculptural landmark and a functional, shaded sanctuary for the public.</p>
+            <p>Sector Plaza is an academic project designed under Professor Filler, exploring structural elements, outdoor plaza environments, and spatial hierarchy.</p>
+        </div>
+
+        <div class="view-toggle">
+            <button class="toggle-btn active" id="btn-carousel">Carousel View</button>
+            <button class="toggle-btn" id="btn-scroll">Scroll View</button>
+        </div>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-button carousel-prev">&#10094;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide"><img src="images/harbor-new-2.png" alt="Plan and Handmade Models" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/harbor-new-3.png" alt="Elevations and Sections" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/harbor-new-4.png" alt="Handmade sketches" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/harbor-new-5.png" alt="Perspectives" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                    <li class="carousel-slide"><img src="images/harbor-new-6.png" alt="Perspective 4" style="width: 100%; height: auto; border: 1px solid var(--border-color);"></li>
+                </ul>
+            </div>
+            <button class="carousel-button carousel-next">&#10095;</button>
         </div>
     </main>
 
@@ -47,5 +65,6 @@
             <p>&copy; 2026 Cristine Monge. All rights reserved.</p>
         </div>
     </footer>
+    <script src="carousel.js"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@ h1, h2, h3, .logo {
 }
 
 .section-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bitter', serif;
     font-size: 3rem;
     margin-bottom: 3rem;
 }
@@ -89,15 +89,21 @@ main {
 
 /* Hero Section */
 #hero {
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-top: 5rem;
+    justify-content: flex-start;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    background-color: var(--bg-color);
+    background-image: url('images/hero-home-new-clean.png');
+    background-size: cover;
+    background-position: center calc(100% + 8rem);
+    background-repeat: no-repeat;
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bitter', serif;
     font-size: 6rem;
     line-height: 1.1;
     margin-bottom: 2rem;
@@ -318,7 +324,7 @@ main {
 }
 
 .project-title-large {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bitter', serif;
     font-size: 5rem;
     line-height: 1.1;
     margin-bottom: 3rem;
@@ -464,4 +470,116 @@ footer {
         flex-direction: column;
         gap: 1.5rem;
     }
+}
+
+/* ---------- Carousel ---------- */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.carousel-button:hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-button.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: transparent;
+    box-shadow: none;
+}
+
+.carousel-prev {
+    left: 1rem;
+}
+
+.carousel-next {
+    right: 1rem;
+}
+
+/* ---------- View Toggle ---------- */
+.view-toggle {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    font-family: inherit;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: var(--text-main);
+}
+
+.toggle-btn.active {
+    color: var(--text-main);
+    border-bottom: 1px solid var(--text-main);
+}
+
+/* Scroll Mode Overrides */
+.carousel-wrapper.scroll-mode .carousel-track {
+    flex-direction: column;
+    gap: 4rem;
+    transform: none !important;
+}
+
+.carousel-wrapper.scroll-mode .carousel-track-container {
+    overflow: visible;
+}
+
+.carousel-wrapper.scroll-mode .carousel-button {
+    display: none;
 }
